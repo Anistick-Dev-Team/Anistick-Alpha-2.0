@@ -1,0 +1,36 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+var HubSpotJsControl=new function(){this.blogs={};this.openBlogPostOverlay=function(A){jQuery.get("/ajax/getHubSpotBlogPostOverlay/"+A+"/",function(B){parseResponse(B);if(responseArray.code=="0"){var C=jQuery("#hubspot-blog-post-overlay");if(C.length){C.replaceWith(responseArray.html)}else{jQuery("body").append(responseArray.html)}showOverlay(jQuery("#hubspot-blog-post-overlay"))}else{displayFeedback("1"+responseArray.json.error)}})};this.callAuthUI=function(B,A){window.open("/callHubSpotAuth/"+B+"/"+A,"openHSUserLogin","height=450,width=900,directories=no,menubar=yes,scrollbars=yes,status=no,toolbar=no")};this.publishPost=function(G,D,A,C,F,B){var E={};E.uid=D;E.mid=A;E.gid=C;E.title=F;E.caption=B;jQuery.post("/ajax/publishHubSpotBlogPost/",E,function(H){parseResponse(H);if(responseArray.code=="0"){G.reset();var I=responseArray.json["postUrl"];jsoBlogPostUIController.showUI3_PostSucceeded(I)}else{G.reset();jsoBlogPostUIController.showUI4_PostFailed()}})};this.savePostAsDraft=function(G,D,A,C,F,B){var E={};E.uid=D;E.mid=A;E.gid=C;E.title=F;E.caption=B;jQuery.post("/ajax/saveHubSpotBlogPostAsDraft/",E,function(H){parseResponse(H);if(responseArray.code=="0"){G.reset();var I=responseArray.json["postUrl"];jsoBlogPostUIController.showUI3_PostSucceeded(I)}else{G.reset();jsoBlogPostUIController.showUI4_PostFailed()}})}};window.callHubSpotAuthError=function(A){jsoBlogPostUIController.showUI6_AuthenticationRejected()};window.callHubSpotAuthSuccess=function(B,C){switch(B){case"blog_post":var D=jQuery("#hubspot-blog-post-overlay");if(D.length){var A=C[0];var E=C[1];if(E.length>0){HubSpotJsControl.blogs=E;jsoBlogPostUIController.showUI2_Form(true)}else{jsoBlogPostUIController.showUI5_BlogNotFound()}}break;default:}};
+
+}
+/*
+     FILE ARCHIVED ON 03:35:50 Nov 12, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:05:52 Apr 30, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 73.631
+  exclusion.robots: 0.168
+  exclusion.robots.policy: 0.153
+  RedisCDXSource: 0.545
+  esindex: 0.008
+  LoadShardBlock: 50.272 (3)
+  PetaboxLoader3.datanode: 76.53 (4)
+  CDXLines.iter: 19.614 (3)
+  load_resource: 77.599
+  PetaboxLoader3.resolve: 36.037
+*/
